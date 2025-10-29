@@ -39,7 +39,7 @@ def load_graph(input_path: str) -> dict[int, list[int]]:
     graph: dict[int, list[int]] = {i: [] for i in range(1, num_vertices + 1)}
     for u, v in edges:
         if u == v:
-            continue  # ignoriši petlje
+            continue
         if v not in graph[u]:
             graph[u].append(v)
         if u not in graph[v]:
